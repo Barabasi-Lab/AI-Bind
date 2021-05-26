@@ -1,4 +1,4 @@
-![Logo](https://github.com/ChatterjeeAyan/AI-Bind/tree/main/Images/NetSci_Logo.png)
+![Logo](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/NetSci_Logo.png)
 
 # AI-Bind
 
@@ -40,13 +40,55 @@ AI-Bind uses chemical embeddings trained on datasets way larger than only the bi
 
 The primary ML model used is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins respectively. These embeddings are fed into a dense layer which acts as the decoder predicting the binding probability.
 
-![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/tree/main/Images/VecNet.png)
+![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/VecNet.png)
 
 # Setup
 
+Getting started using a conda env:
+
+```shell
+conda create --name foodmine python=3.6
+conda activate foodmine
+```
+
+Installing packages:
+
+```shell
+pip install -r requirements.txt
+./install_additional_packages.sh
+```
+
 # Files
 
+Use the following notebook for predicting binding using VecNet: 
+
+# DeepPurpose and Configuration Model Notebooks
+
+## Transformer-CNN and degree bias in false positives:
+
+## Transformer-CNN with SMILEs and amino acid sequences assigned randomly: 
+
+# Data Preparation 
+
+## Preparing 7-hop negatives for training 
+
+## Degree stratification and filtered dataset
+
+## Preparing validation and test sets: 
+
+# Training of VecNet:
+
+## Cross-validation over VecNet:
+
 # Data
+
+# Positive bindings file for DrugBank and NDM:
+
+# Degree stratified dataset with network negative samples: 
+
+# Validation and test data for cross-validation: 
+
+# Results from auto-docking simulations: 
 
 
 
