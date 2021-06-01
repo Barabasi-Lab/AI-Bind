@@ -8,15 +8,15 @@ AI-Bind is a pipeline using unsupervised pre-training for learning chemical stru
 
 Stat-of-the-art machine learning models like DeepPurpose (e.g., Transformer-CNN) used for drug repurposing learn the topology of the drug-target interaction network. Much simpler network model (configuration model) can acheive a similar test performance.
 
-While predicting potential drugs for novel targets, drugs with more binding annotations in the training data appear more often. These models lack the ability to learn structural patterns of proteins and ligands, fixing which would enable them for the exploratory analysis over new targets.
+While predicting potential drugs for novel targets, drugs with more binding annotations in the training data appear more often. These models lack the ability to learn structural patterns of proteins and ligands, fixing which would enable ML models in the exploratory analysis over new targets.
 
 The binding prediction task can be classified into 3 types: 
 
-i) Unseen edges: When both ligand and target are present in the training data
+i) Unseen edges: When both ligand and target from the test dataset are present in the training data
 
-ii) Unseen targets: When only the ligand is present in the training data
+ii) Unseen targets: When only the ligand from the test dataset is present in the training data
 
-iii) Unseen nodes: When both ligand and target are absent in the training data
+iii) Unseen nodes: When both ligand and target from the test dataset are absent in the training data
 
 Despite performing well in predicting over unseen edges amd unseen targets, existing ML models and network model performs poorly on unseen nodes. 
 
@@ -32,15 +32,15 @@ We use network distance to generate negative samples for the nodes in DTI networ
 
 ## Unsupervised Pre-training
 
-Current protein-ligand binding prediction tasks train the deep models in an end-to-end fashion. This makes the task of generalizing to new chemical structures difficult. 
+Current protein-ligand binding prediction infrastructures train the deep models in an end-to-end fashion. This makes the task of generalizing to new chemical structures difficult. 
 
-AI-Bind uses chemical embeddings trained on datasets way larger than only the binding dataset. This allows AI-Bind to extract meaningful structural patterns from completely new ligands and proteins. 
+AI-Bind uses chemical embeddings trained on datasets way larger than only the binding dataset. This allows AI-Bind to extract meaningful structural patterns for completely new ligands and proteins. 
 
 ## VecNet
 
 The primary ML model used is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins respectively. These embeddings are fed into a dense layer which acts as the decoder predicting the binding probability.
 
-![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/VecNet.png)
+![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/VecNet.PNG)
 
 # Setup
 
@@ -62,33 +62,35 @@ pip install -r requirements.txt
 
 Use the following notebook for predicting binding using VecNet: 
 
-# DeepPurpose and Configuration Model Notebooks
+#### DeepPurpose and Configuration Model Notebooks:
 
-## Transformer-CNN and degree bias in false positives:
+Transformer-CNN and degree bias in false positives:
 
-## Transformer-CNN with SMILEs and amino acid sequences assigned randomly: 
+Transformer-CNN with SMILEs and amino acid sequences assigned randomly: 
 
-# Data Preparation 
+#### Data Preparation 
 
-## Preparing 7-hop negatives for training 
+Curating DrugBank, NCFD, BindingDB and DTC: database_handling/Curating Files.ipynb
 
-## Degree stratification and filtered dataset
+Preparing 7-hop negatives for training: data_preparation/Data Preparation - CombinedNetworks Shortest Path.ipynb
 
-## Preparing validation and test sets: 
+Degree stratification and filtered dataset: data_preparation/Data Preparation - Stratification.ipynb
 
-# Training of VecNet:
+Preparing validation and test sets: data_preparation/K Fold Data Split.ipynb
 
-## Cross-validation over VecNet:
+#### Training of VecNet:
+
+Cross-validation over VecNet: VecNet/VecNet_train_test.ipynb
 
 # Data
 
-# Positive bindings file for DrugBank and NDM:
+Positive bindings file for DrugBank and NDM: 
 
-# Degree stratified dataset with network negative samples: 
+Degree stratified dataset with network negative samples: 
 
-# Validation and test data for cross-validation: 
+Validation and test data for cross-validation: 
 
-# Results from auto-docking simulations: 
+Results from auto-docking simulations: 
 
 
 
