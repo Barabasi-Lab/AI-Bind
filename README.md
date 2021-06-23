@@ -51,8 +51,8 @@ The primary ML model used is VecNet, which uses Mol2vec and ProtVec to embed the
 Getting started using a conda env:
 
 ```shell
-conda create --name foodmine python=3.6
-conda activate foodmine
+conda create --name ai-bind python=3.6
+conda activate ai-bind
 ```
 
 Installing packages:
