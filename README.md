@@ -4,6 +4,10 @@
 
 AI-Bind is a pipeline using unsupervised pre-training for learning chemical structures and leveraging network science methods to predict protein-ligand binding using Deep Learning. 
 
+## Usage
+
+Use the Python notebook VecNet-User-Frontend.ipynb to make binding predictions on unseen protein targets and both unseen ligands and targets.
+
 ## Shortcomings of existing deep models
 
 Stat-of-the-art machine learning models like DeepPurpose (e.g., Transformer-CNN) used for drug repurposing learn the topology of the drug-target interaction network. Much simpler network model (configuration model) can acheive a similar test performance.
@@ -55,42 +59,43 @@ Installing packages:
 
 ```shell
 pip install -r requirements.txt
-./install_additional_packages.sh
 ```
 
 # Files
 
-Use the following notebook for predicting binding using VecNet: 
+The repository contains multiple folders: 
 
-#### DeepPurpose and Configuration Model Notebooks:
+#### DeepPurpose and Confuguration Model:
 
-Transformer-CNN and degree bias in false positives:
+DeepPurpose Rerun - Transformer CNN.ipynb: We retrain DeepPurpose here using BindingDB data. Muleiple experiments on DeepPurpose have been carried out here, which includes randomly assigning chemical structures and degree analysis of DeepPurpose performance.
 
-Transformer-CNN with SMILEs and amino acid sequences assigned randomly: 
+Configuration Models on DeepPurpose data.ipynb: We explore the performance of duplex configuration model on DeepPurpose train-test datasets.
 
-#### Data Preparation 
+#### VecNet
 
-Curating DrugBank, NCFD, BindingDB and DTC: database_handling/Curating Files.ipynb
+VecNet-Uneen_Targets.ipynb: We create the network-derived negatives, execute a 5-fold cross-validation and make predictions on SARS-CoV-2 genes using VecNet.
 
-Preparing 7-hop negatives for training: data_preparation/Data Preparation - CombinedNetworks Shortest Path.ipynb
+VecNet-Uneen_Nodes.ipynb: We execute a 5-fold cross-validation on unseen nodes here.
 
-Degree stratification and filtered dataset: data_preparation/Data Preparation - Stratification.ipynb
+#### VAENet
 
-Preparing validation and test sets: data_preparation/K Fold Data Split.ipynb
+VAENet-Uneen_Targets.ipynb: We create the network-derived negatives and execute a 5-fold cross-validation using VAENet.
 
-#### Training of VecNet:
+VAENet-Uneen_Nodes.ipynb: We execute a 5-fold cross-validation on unseen nodes here.
 
-Cross-validation over VecNet: VecNet/VecNet_train_test.ipynb
+#### Configuration Model - 5 fold
+
+Configuration Model - Cross-Validation.ipynb: We execute a 5-fold cross-validation over unseen taregts and nodes on duplex configuration model using our data.
+
+#### DeepPurpose - 5 fold
+
+Deep Purpose - Final DataSet - Unseen Targets.ipynb: We execute a 5-fold cross-validation over unseen taregts on DeepPurpose using our data.
+
+Deep Purpose - Final DataSet - Unseen Nodes.ipynb: We execute a 5-fold cross-validation over unseen nodes on DeepPurpose using our data.
 
 # Data
 
-Positive bindings file for DrugBank and NDM: 
-
-Degree stratified dataset with network negative samples: 
-
-Validation and test data for cross-validation: 
-
-Results from auto-docking simulations: 
+GitFLS set-up is under progress. 
 
 
 
