@@ -10,7 +10,7 @@ Use the Python notebook VecNet-User-Frontend.ipynb to make binding predictions o
 
 ## Data
 
-Please download the data files from: https://www.dropbox.com/work/Foodome%20Team%20Folder/Chatterjee%2C%20Ayan/AI-Bind-Release/data/sars-busters-consolidated
+Please download the data files from: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0
 
 ## Shortcomings of existing deep models
 
