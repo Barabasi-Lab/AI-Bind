@@ -95,8 +95,7 @@ Deep Purpose - Final DataSet - Unseen Nodes.ipynb: We execute a 5-fold cross-val
 
 # Data
 
-GitFLS set-up is under progress. 
-
+Please downlad the related data from: https://www.dropbox.com/work/Foodome%20Team%20Folder/Chatterjee%2C%20Ayan/AI-Bind-Release/data/sars-busters-consolidated
 
 
 
