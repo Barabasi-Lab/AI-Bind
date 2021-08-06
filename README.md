@@ -8,7 +8,7 @@ AI-Bind is a pipeline which uses unsupervised pre-training for learning chemical
 
 Use the Python notebook VecNet-User-Frontend.ipynb to make binding predictions on unseen ligands and targets.
 
-# Data
+## Data
 
 Please download the data files from: https://www.dropbox.com/work/Foodome%20Team%20Folder/Chatterjee%2C%20Ayan/AI-Bind-Release/data/sars-busters-consolidated
 
