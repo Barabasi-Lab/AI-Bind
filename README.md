@@ -2,11 +2,15 @@
 
 # AI-Bind
 
-AI-Bind is a pipeline using unsupervised pre-training for learning chemical structures and leveraging network science methods to predict protein-ligand binding using Deep Learning. 
+AI-Bind is a pipeline which uses unsupervised pre-training for learning chemical structures and leverages network science methods to predict protein-ligand binding using Deep Learning. 
 
 ## Usage
 
-Use the Python notebook VecNet-User-Frontend.ipynb to make binding predictions on unseen protein targets and both unseen ligands and targets.
+Use the Python notebook VecNet-User-Frontend.ipynb to make binding predictions on unseen ligands and targets.
+
+# Data
+
+Please download the data files from: https://www.dropbox.com/work/Foodome%20Team%20Folder/Chatterjee%2C%20Ayan/AI-Bind-Release/data/sars-busters-consolidated
 
 ## Shortcomings of existing deep models
 
@@ -65,23 +69,11 @@ pip install -r requirements.txt
 
 The repository contains multiple folders: 
 
-#### DeepPurpose and Confuguration Model:
+#### AIBind
 
-DeepPurpose Rerun - Transformer CNN.ipynb: We retrain DeepPurpose here using BindingDB data. Muleiple experiments on DeepPurpose have been carried out here, which includes randomly assigning chemical structures and degree analysis of DeepPurpose performance.
+AIBind.py: Contains the Python class for AI-Bind. Includes all the ML models. 
 
-Configuration Models on DeepPurpose data.ipynb: We explore the performance of duplex configuration model on DeepPurpose train-test datasets.
-
-#### VecNet
-
-VecNet-Uneen_Targets.ipynb: We create the network-derived negatives, execute a 5-fold cross-validation and make predictions on SARS-CoV-2 genes using VecNet.
-
-VecNet-Uneen_Nodes.ipynb: We execute a 5-fold cross-validation on unseen nodes here.
-
-#### VAENet
-
-VAENet-Uneen_Targets.ipynb: We create the network-derived negatives and execute a 5-fold cross-validation using VAENet.
-
-VAENet-Uneen_Nodes.ipynb: We execute a 5-fold cross-validation on unseen nodes here.
+import_modules.py: Contains all the necessary Python modules to run A_iBind models. 
 
 #### Configuration Model - 5 fold
 
@@ -93,9 +85,45 @@ Deep Purpose - Final DataSet - Unseen Targets.ipynb: We execute a 5-fold cross-v
 
 Deep Purpose - Final DataSet - Unseen Nodes.ipynb: We execute a 5-fold cross-validation over unseen nodes on DeepPurpose using our data.
 
-# Data
+#### DeepPurpose and Confuguration Model
 
-Please downlad the related data from: https://www.dropbox.com/work/Foodome%20Team%20Folder/Chatterjee%2C%20Ayan/AI-Bind-Release/data/sars-busters-consolidated
+DeepPurpose Rerun - Transformer CNN.ipynb: We retrain DeepPurpose here using BindingDB data. Muleiple experiments on DeepPurpose have been carried out here, which includes randomly assigning chemical structures and degree analysis of DeepPurpose performance.
+
+Configuration Models on DeepPurpose data.ipynb: We explore the performance of duplex configuration model on DeepPurpose train-test datasets.
+
+runscriptposneg.m: Runs the network configuration model using ligand and target degree sequences. 
+
+#### Random Input Tests
+
+VecNet-Uneen_Nodes-RANDOM.ipynb: Run VecNet on unseen nodes where ligand and target embeddings are replaced by Gaussian random inputs.
+
+VecNet-Uneen_Nodes-T-RANDOM-Only.ipynb: Run VecNet on unseen nodes where target embeddings are replaced by Gaussian random inputs.
+
+VecNet-Uneen_Targets-RANDOM.ipynb: Run VecNet on unseen targets where ligand and target embeddings are replaced by Gaussian random inputs.
+
+VecNet-Uneen_Targets-T-RANDOM-Only.ipynb: Run VecNet on unseen targets where target embeddings are replaced by Gaussian random inputs.
+
+#### Siamese
+
+Siamese_Uneen_Targets.ipynb: We create the network-derived negatives and execute a 5-fold cross-validation using the Siamese model.
+
+Siamese_Uneen_Nodes.ipynb: We execute a 5-fold cross-validation on unseen nodes here.
+
+#### VAENet
+
+VAENet-Uneen_Targets.ipynb: We create the network-derived negatives and execute a 5-fold cross-validation using VAENet.
+
+VAENet-Uneen_Nodes.ipynb: We execute a 5-fold cross-validation on unseen nodes here.
+
+#### Validation
+
+SARS-CoV-2 Predictions Analysis VecNet.ipynb: Auto docking validation of top and bottom 100 predictions made by VecNet on SARS-CoV-2 and related human genes.
+
+#### VecNet
+
+VecNet-Uneen_Targets.ipynb: We create the network-derived negatives, execute a 5-fold cross-validation and make predictions on SARS-CoV-2 genes using VecNet.
+
+VecNet-Uneen_Nodes.ipynb: We execute a 5-fold cross-validation on unseen nodes here.
 
 
 
