@@ -73,7 +73,7 @@ The repository contains multiple folders:
 
 AIBind.py: Contains the Python class for AI-Bind. Includes all the ML models. 
 
-import_modules.py: Contains all the necessary Python modules to run A_iBind models. 
+import_modules.py: Contains all the necessary Python modules to run AI-Bind models. 
 
 #### Configuration Model - 5 fold
 
@@ -87,11 +87,15 @@ Deep Purpose - Final DataSet - Unseen Nodes.ipynb: We execute a 5-fold cross-val
 
 #### DeepPurpose and Confuguration Model
 
-DeepPurpose Rerun - Transformer CNN.ipynb: We retrain DeepPurpose here using BindingDB data. Muleiple experiments on DeepPurpose have been carried out here, which includes randomly assigning chemical structures and degree analysis of DeepPurpose performance.
+DeepPurpose Rerun - Transformer CNN.ipynb: We retrain DeepPurpose here using BindingDB data. Multiple experiments on DeepPurpose have been carried out here, which includes randomly assigning chemical structures and degree analysis of DeepPurpose performance.
 
 Configuration Models on DeepPurpose data.ipynb: We explore the performance of duplex configuration model on DeepPurpose train-test datasets.
 
 runscriptposneg.m: Runs the network configuration model using ligand and target degree sequences. 
+
+#### EigenSpokes
+
+Eigen Spokes Analysis.ipynb - Runs Eigen Spokes analysis on combined adjacency matrix. 
 
 #### Random Input Tests
 
