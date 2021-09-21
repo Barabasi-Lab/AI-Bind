@@ -4,13 +4,25 @@
 
 AI-Bind is a pipeline which uses unsupervised pre-training for learning chemical structures and leverages network science methods to predict protein-ligand binding using Deep Learning. 
 
-## Usage
+## Set-up and Usage
 
-Use the Python notebook VecNet-User-Frontend.ipynb to make binding predictions on unseen ligands and targets.
+Two usecases 
+
+(1) Run predictions  
+
+Run the docker file: docker run -it <placeholder> [Zohair to add this]
+
+Use the Python notebook VecNet-User-Frontend.ipynb to make binding predictions. 
+
+(2) Reproducing the results 
+
+Pull this docker image: https://hub.docker.com/r/omairs/foodome2
+
+This docker image contains all the data files, notebooks, and environments required to reproduce the results. 
 
 ## Data
 
-Please download the data files from: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0
+Data files are available here: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0
 
 ## Shortcomings of existing deep models
 
@@ -49,21 +61,6 @@ AI-Bind uses chemical embeddings trained on datasets way larger than only the bi
 The primary ML model used is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins respectively. These embeddings are fed into a dense layer which acts as the decoder predicting the binding probability.
 
 ![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/VecNet.PNG)
-
-# Setup
-
-Getting started using a conda env:
-
-```shell
-conda create --name ai-bind python=3.6
-conda activate ai-bind
-```
-
-Installing packages:
-
-```shell
-pip install -r requirements.txt
-```
 
 # Files
 
