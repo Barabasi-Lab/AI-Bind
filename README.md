@@ -6,7 +6,7 @@ AI-Bind is a pipeline which uses unsupervised pre-training for learning chemical
 
 ## Set-up and Usage
 
-Two usecases 
+Two usecases:
 
 (1) Run predictions  
 
@@ -62,7 +62,7 @@ AI-Bind uses chemical embeddings trained on datasets way larger than the binding
 
 The best performing ML model in AI-Bind implementation is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins, respectively. These embeddings are fed into a dense layer which acts as the decoder, predicting the binding probability.
 
-![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/VecNet.pdf)
+![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/VecNet.png)
 
 ## Reproducing results
 
