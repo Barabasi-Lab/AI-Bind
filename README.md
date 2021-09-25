@@ -10,7 +10,7 @@ Two usecases:
 
 (1) Run predictions  
 
-Run the docker file: docker run -it <placeholder> [Zohair to add this]
+Run the docker file: docker run -it AI_Bind_Image (https://hub.docker.com/r/omairs/AI_Bind_Image)
 
 Use the Python notebook VecNet-User-Frontend.ipynb to make the binding predictions. 
 
