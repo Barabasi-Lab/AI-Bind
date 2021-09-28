@@ -10,9 +10,21 @@ Two usecases:
 
 (1) Run predictions  
 
-Run the docker file: docker run -it AI_Bind_Image (https://hub.docker.com/r/omairs/AI_Bind_Image)
+1. Download the docker file named "Predictions.dockerfile"
+2. On your terminal, move to the directory with the dockerfile and run : 
+	docker build -t aibindpred -f ./AIBind_Predict_v2.dockerfile ./
+3. To run the image as a container, run : 
+	docker run -it --gpus all --name aibindpredcontainer -p 8888:8888 aibindpred
 
-Use the Python notebook VecNet-User-Frontend.ipynb to make the binding predictions. 
+	You may clone the git repository inside the container, or attach your local volume while running the container :
+	docker run -it --gpus all --name aibindpredcontainer -p 8888:8888 -v ./local_directory:/home aibindpred
+
+4. To execute additional shells inside the container, run : 
+	docker exec -it aibindpredcontainer /bin/bash
+5. To run a Jupyter notebook instance inside the container, run :
+	jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root
+6. Run the notebook titled VecNet-User-Frontend.ipynb to make the binding predictions
+
 
 (2) Reproducing the results 
 
