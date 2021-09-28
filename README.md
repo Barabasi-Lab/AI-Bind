@@ -10,7 +10,6 @@ Two usecases:
 
 (1) Run predictions  
 
-
 1. Download the docker file named "Predictions.dockerfile"
 2. On your terminal, move to the directory with the dockerfile and run : 
 	docker build -t aibindpred -f ./AIBind_Predict_v2.dockerfile ./
@@ -25,6 +24,7 @@ Two usecases:
 5. To run a Jupyter notebook instance inside the container, run :
 	jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root
 6. Run the notebook titled VecNet-User-Frontend.ipynb to make the binding predictions
+
 
 (2) Reproducing the results 
 
