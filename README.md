@@ -10,7 +10,7 @@ Two usecases:
 
 (1) Run predictions  
 
-Run the docker file: docker run -it AI_Bind_Image (https://hub.docker.com/r/omairs/AI_Bind_Image)
+Run the docker file: https://hub.docker.com/r/omairs/foodome2_no_data
 
 Use the Python notebook VecNet-User-Frontend.ipynb to make the binding predictions. 
 
