@@ -140,6 +140,8 @@ VecNet-Uneen_Targets-RANDOM.ipynb: Run VecNet on unseen targets where ligand and
 
 VecNet-Uneen_Targets-T-RANDOM-Only.ipynb: Run VecNet on unseen targets where target embeddings are replaced by Gaussian random inputs.
 
+Queries and suggestions can be addressed to: chatterjee.ay@northeastern.edu
+
 
 
 
