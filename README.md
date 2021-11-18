@@ -74,7 +74,7 @@ AI-Bind uses chemical embeddings trained on datasets way larger than the binding
 
 The best performing ML model in AI-Bind implementation is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins, respectively. These embeddings are fed into a dense layer which acts as the decoder, predicting the binding probability.
 
-![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/VecNet.png)
+![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/GitHub_Diagram.pdf)
 
 ## Reproducing results
 
