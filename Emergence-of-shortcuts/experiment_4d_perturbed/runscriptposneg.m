@@ -18,5 +18,5 @@ ylabel('predicted degree')
 
 
 %%
-writematrix(summat10,'C:\Users\Ayan\Documents\GitHub\AI-Bind\Emergence-of-shortcuts\Unipartite\experiment_4d_perturbed\summat10.csv')
-writematrix(summat01,'C:\Users\Ayan\Documents\GitHub\AI-Bind\Emergence-of-shortcuts\Unipartite\experiment_4d_perturbed\summat01.csv')
+writematrix(summat10,'C:\Users\Ayan\Documents\GitHub\AI-Bind\Emergence-of-shortcuts\experiment_4d_perturbed\summat10.csv')
+writematrix(summat01,'C:\Users\Ayan\Documents\GitHub\AI-Bind\Emergence-of-shortcuts\experiment_4d_perturbed\summat01.csv')
