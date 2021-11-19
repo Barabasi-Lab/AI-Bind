@@ -1,0 +1,75 @@
+protein_name,ligand_name,binding_affinity (kcal/mole)
+TRIM59,Pipecuronium,-7.6
+FAR2,Pipecuronium,-9.1
+ZC3H18,Pipecuronium,-7.1
+TRIM59,Pancuronium,-7.9
+FAR2,Pancuronium,-9.5
+ZC3H18,Pancuronium,-7.4
+USP54,Pipecuronium,-8.8
+TRIM59,Vecuronium,-8.1
+TRIM59,Dactinomycin,-9
+FAR2,Dactinomycin,-10.2
+FAR2,Vecuronium,-8.6
+USP54,Pancuronium,-9.1
+ZC3H18,Vecuronium,-7.3
+ZC3H18,Dactinomycin,-8.5
+TRIM59,Rapacuronium,-6.8
+TRIM59,Rocuronium,-7.7
+TRIM59,Rolitetracycline,-7.8
+TRIM59,Drospirenone,-8.5
+TRIM59,Valspodar,-6.5
+FAR2,Rapacuronium,-8.7
+TRIM59,Cyclosporin A,-6.8
+FAR2,Rocuronium,-9.2
+TRIM59,Metocurine Iodide,-7.8
+FAR2,Valspodar,-6.8
+TRIM59,Unii-0Rk7M7Iabe,-6.3
+ZC3H18,Rapacuronium,-7.4
+TRIM59,Metocurine,-8.1
+TRIM59,Spironolactone,-7.1
+FAR2,Cyclosporin A,-6.6
+TRIM59,Voclosporin,-5.9
+ZC3H18,Rolitetracycline,-7.6
+ZC3H18,Rocuronium,-6.8
+TRIM59,Eplerenone,-7.8
+USP54,Vecuronium,-8.9
+TRIM59,Oxymetholone,-7.3
+ZC3H18,Valspodar,-6.9
+FAR2,Metocurine Iodide,-10
+FAR2,Rolitetracycline,-9.1
+FAR2,Voclosporin,-6.5
+ZC3H18,Cyclosporin A,-7.2
+FAR2,Metocurine,-9.5
+TRIM59,Testosterone Cypionate,-8.3
+FAR2,Drospirenone,-11.4
+DNMT1,Pipecuronium,-8.9
+ZC3H18,Voclosporin,-6.2
+TRIM59,Formestane,-7.2
+ZC3H18,Drospirenone,-8.7
+TRIM59,"(21S)-1Aza-4,4-Dimethyl-6,19-Dioxa-2,3,7,20-Tetraoxobicyclo[19.4.0] Pentacosane",-7.5
+ZC3H18,Metocurine Iodide,-8
+TRIM59,Lanosterol,-7.8
+ZC3H18,Unii-0Rk7M7Iabe,-6.4
+TRIM59,Calusterone,-7.3
+FAR2,Unii-0Rk7M7Iabe,-9.6
+TRIM59,Bardoxolone Methyl,-8.6
+ZC3H18,Metocurine,-7.8
+TRIM59,Echinocystic Acid,-7.6
+FAR2,Spironolactone,-10.2
+TRIM59,Diprenorphine,-6.6
+TRIM59,[3H]-Diprenorphine,-7.5
+TRIM59,Buprenorphine,-6.6
+FAR2,Eplerenone,-10.7
+ZC3H18,Spironolactone,-7.6
+TRIM59,Oleanolic Acid,-8
+TRIM59,Bardoxolone,-8.7
+TRIM59,4-Cholesten-3-One,-7.1
+ZC3H18,Eplerenone,-7.6
+TRIM59,Cortisone,-7.1
+TRIM59,Istaroxime,-7
+TRIM59,Minocycline,-6.4
+TRIM59,Dihydroergocornine,-8
+TRIM59,Trabectedin,-7.4
+TRIM59,Stanozolol,-7.3
+USP54,Rapacuronium,-8.1
+ZC3H18,Oxymetholone,-7.2
