@@ -13,7 +13,7 @@ Two usecases:
 1. Download the docker file named "Predictions.dockerfile"
 2. On your terminal, move to the directory with the dockerfile and run : 
 	docker build -t aibindpred -f ./AIBind_Predict_v2.dockerfile ./
-3. To run the image as a container, run : 
+3. To run the image as a container: 
 	docker run -it --gpus all --name aibindpredcontainer -p 8888:8888 aibindpred
 
 	You may clone the git repository inside the container, or attach your local volume while running the container :
@@ -42,37 +42,37 @@ Data files are available here: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6
 
 Stat-of-the-art machine learning models like DeepPurpose (e.g., Transformer-CNN) used for drug repurposing learn the topology of the drug-target interaction network. Much simpler network model (configuration model) can acheive a similar test performance.
 
-While predicting potential drugs for novel targets, drugs with more binding annotations in the training data appear more often. These models lack the ability to learn structural patterns of proteins and ligands, fixing which would enable ML models in the exploratory analysis over new drugs and targets.
+While predicting potential drugs for novel (i.e., never-before-seen) targets, drugs with more binding annotations in the training data appear more often. The existing ML models lack the ability to learn structural patterns of proteins and ligands, fixing which would enable the ML models in the exploratory analysis over new proteins and ligands.
 
 The binding prediction task can be classified into 3 types: 
 
-i) Unseen edges (Transductive test): When both ligand and target from the test dataset are present in the training data
+i) Unseen edges (Transductive test): When both ligand and target from the test dataset are present in the training data.
 
-ii) Unseen targets (Semi-inductive test): When only the ligand from the test dataset is present in the training data
+ii) Unseen targets (Semi-inductive test): When only the ligand from the test dataset is present in the training data.
 
-iii) Unseen nodes (Inductive test): When both ligand and target from the test dataset are absent in the training data
+iii) Unseen nodes (Inductive test): When both ligand and target from the test dataset are absent in the training data.
 
-Despite performing well in predicting over unseen edges amd unseen targets, existing ML models and network model performs poorly on unseen nodes. 
+Despite performing well in predicting over unseen edges amd unseen targets, existing ML models and network model (configuration model) perform poorly on unseen nodes. 
 
-AI-Bind learns from the chemical structures instead of learning the network topology and enables the binding exploration for new structures.
+AI-Bind learns binding patterns from the chemical structures instead of learning the topology of the protein-ligand interaction network and enables binding exploration for new structures.
 
 ### Data preparation
 
-Existing ML models for binding prediction use databases like DrugBank, BindingDB, Tox21, Davis, Kiba, Drug Target Commons etc. These datasets have a large bias in the amount of binding and non-binding information for ligands and targets.
+Existing ML models for binding prediction use databases like DrugBank, BindingDB, Tox21, Davis, Kiba, Drug Target Commons etc. These datasets have large bias in the amount of binding and non-binding information for proteins and ligands.
 
-The ML models learn the DTI network topology and use the degree information of the nodes while predicting. Many nodes having only positive or only negative pairs end up being predicting as always binding or always non-binding. 
+The ML models learn the topology of the protein-ligand interaction network and use the degree information of the nodes while predicting. Many nodes having only positive or only negative pairs end up being over-predicting as binding or non-binding. 
 
-We use network distance to generate negative samples for the nodes in DTI network which creates balance between the amount of positive and negative interactions for each ligand and target.
+We use shortest path distance in the interaction network to generate negative samples for the nodes (proteins and ligands) which creates balance between the amount of positive and negative interactions for each protein and ligand.
 
 ### Unsupervised Pre-training
 
-Current protein-ligand binding prediction infrastructures train the deep models in an end-to-end fashion. This makes the task of generalizing to new chemical structures difficult. 
+Current protein-ligand binding prediction infrastructures train the deep models in an end-to-end fashion. This makes the task of generalizing to new chemical structures difficult for the ML models. 
 
-AI-Bind uses chemical embeddings trained on datasets way larger than the binding dataset. This allows AI-Bind to extract meaningful structural patterns for completely new ligands and proteins, beyond those present in training. 
+AI-Bind uses chemical embeddings trained on datasets significantly larger than the binding dataset. This allows AI-Bind to extract meaningful structural patterns for never-before-seen ligands and proteins, beyond those present in training. 
 
 ### VecNet
 
-The best performing ML model in AI-Bind implementation is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins, respectively. These embeddings are fed into a dense layer which acts as the decoder, predicting the binding probability.
+The best performing ML model in AI-Bind implementation is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins, respectively. These embeddings are fed into a decoder, predicting the binding probability.
 
 ![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/GitHub_Diagram.png)
 
@@ -104,7 +104,7 @@ VecNet-Uneen_Targets.ipynb: We execute a 5-fold cross-validation on VecNet.
 
 Deep Purpose - Final DataSet - Unseen Targets.ipynb: We execute a 5-fold cross-validation over unseen taregts on DeepPurpose using the network-derived negatives.
 
-Deep Purpose - Final DataSet - Unseen Nodes.ipynb: We execute a 5-fold cross-validation over unseen nodes on DeepPurpose using othe network-derived negatives.
+Deep Purpose - Final DataSet - Unseen Nodes.ipynb: We execute a 5-fold cross-validation over unseen nodes on DeepPurpose using the network-derived negatives.
 
 ### Configuration Model - 5 fold
 
@@ -118,7 +118,7 @@ VAENet-Uneen_Targets.ipynb: We execute a 5-fold cross-validation on VAENet.
 
 ### Siamese
 
-Siamese_Uneen_Nodes.ipynb: WWe create the network-derived negatives and and execute a 5-fold cross-validation on unseen nodes here.
+Siamese_Uneen_Nodes.ipynb: We create the network-derived negatives and and execute a 5-fold cross-validation on unseen nodes here.
 
 Siamese_Uneen_Targets.ipynb: We execute a 5-fold cross-validation on the Siamese model.
 
