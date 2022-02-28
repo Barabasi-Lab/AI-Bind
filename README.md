@@ -96,31 +96,31 @@ import_modules.py: Contains all the necessary Python modules to run AI-Bind mode
 
 ### VecNet
 
-VecNet-Uneen_Nodes.ipynb: We create the network-derived negatives, execute a 5-fold cross-validation on unseen nodes, and make predictions on SARS-CoV-2 genes using VecNet.
+VecNet-Unseen_Nodes.ipynb: We create the network-derived negatives, execute a 5-fold cross-validation on unseen nodes, and make predictions on SARS-CoV-2 genes using VecNet.
 
-VecNet-Uneen_Targets.ipynb: We execute a 5-fold cross-validation on VecNet.
+VecNet-Unseen_Targets.ipynb: We execute a 5-fold cross-validation on VecNet.
 
 ### DeepPurpose - 5 fold
 
-Deep Purpose - Final DataSet - Unseen Targets.ipynb: We execute a 5-fold cross-validation over unseen taregts on DeepPurpose using the network-derived negatives.
+Deep Purpose - Final DataSet - Unseen Targets.ipynb: We execute a 5-fold cross-validation over unseen targets on DeepPurpose using the network-derived negatives.
 
 Deep Purpose - Final DataSet - Unseen Nodes.ipynb: We execute a 5-fold cross-validation over unseen nodes on DeepPurpose using the network-derived negatives.
 
 ### Configuration Model - 5 fold
 
-Configuration Model - Cross-Validation.ipynb: We execute a 5-fold cross-validation over unseen taregts and nodes on duplex configuration model using the network-derived negatives.
+Configuration Model - Cross-Validation.ipynb: We execute a 5-fold cross-validation over unseen targets and nodes on duplex configuration model using the network-derived negatives.
 
 ### VAENet
 
-VAENet-Uneen_Nodes.ipynb: We create the network-derived negatives and and execute a 5-fold cross-validation on unseen nodes here.
+VAENet-Unseen_Nodes.ipynb: We create the network-derived negatives and and execute a 5-fold cross-validation on unseen nodes here.
 
-VAENet-Uneen_Targets.ipynb: We execute a 5-fold cross-validation on VAENet.
+VAENet-Unseen_Targets.ipynb: We execute a 5-fold cross-validation on VAENet.
 
 ### Siamese
 
-Siamese_Uneen_Nodes.ipynb: We create the network-derived negatives and and execute a 5-fold cross-validation on unseen nodes here.
+Siamese_Unseen_Nodes.ipynb: We create the network-derived negatives and and execute a 5-fold cross-validation on unseen nodes here.
 
-Siamese_Uneen_Targets.ipynb: We execute a 5-fold cross-validation on the Siamese model.
+Siamese_Unseen_Targets.ipynb: We execute a 5-fold cross-validation on the Siamese model.
 
 ### Validation
 
@@ -132,13 +132,13 @@ Eigen Spokes Analysis.ipynb - Runs Eigen Spokes analysis on combined adjacency m
 
 ### Random Input Tests
 
-VecNet-Uneen_Nodes-RANDOM.ipynb: Run VecNet on unseen nodes where ligand and target embeddings are replaced by Gaussian random inputs.
+VecNet-Unseen_Nodes-RANDOM.ipynb: Run VecNet on unseen nodes where ligand and target embeddings are replaced by Gaussian random inputs.
 
-VecNet-Uneen_Nodes-T-RANDOM-Only.ipynb: Run VecNet on unseen nodes where target embeddings are replaced by Gaussian random inputs.
+VecNet-Unseen_Nodes-T-RANDOM-Only.ipynb: Run VecNet on unseen nodes where target embeddings are replaced by Gaussian random inputs.
 
-VecNet-Uneen_Targets-RANDOM.ipynb: Run VecNet on unseen targets where ligand and target embeddings are replaced by Gaussian random inputs.
+VecNet-Unseen_Targets-RANDOM.ipynb: Run VecNet on unseen targets where ligand and target embeddings are replaced by Gaussian random inputs.
 
-VecNet-Uneen_Targets-T-RANDOM-Only.ipynb: Run VecNet on unseen targets where target embeddings are replaced by Gaussian random inputs.
+VecNet-Unseen_Targets-T-RANDOM-Only.ipynb: Run VecNet on unseen targets where target embeddings are replaced by Gaussian random inputs.
 
 ## Citing
 
