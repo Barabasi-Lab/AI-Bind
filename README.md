@@ -40,7 +40,7 @@ Data files are available here: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6
 
 ### Shortcomings of existing deep models
 
-Stat-of-the-art machine learning models like DeepPurpose (e.g., Transformer-CNN) used for drug repurposing learn the topology of the drug-target interaction network. Much simpler network model (configuration model) can acheive a similar test performance.
+State-of-the-art machine learning models like DeepPurpose (e.g., Transformer-CNN) used for drug repurposing learn the topology of the drug-target interaction network. Much simpler network model (configuration model) can acheive a similar test performance.
 
 While predicting potential drugs for novel (i.e., never-before-seen) targets, drugs with more binding annotations in the training data appear more often. The existing ML models lack the ability to learn structural patterns of proteins and ligands, fixing which would enable the ML models in the exploratory analysis over new proteins and ligands.
 
@@ -60,7 +60,7 @@ AI-Bind learns binding patterns from the chemical structures instead of learning
 
 Existing ML models for binding prediction use databases like DrugBank, BindingDB, Tox21, Davis, Kiba, Drug Target Commons etc. These datasets have large bias in the amount of binding and non-binding information for proteins and ligands.
 
-The ML models learn the topology of the protein-ligand interaction network and use the degree information of the nodes while predicting. Many nodes having only positive or only negative pairs end up being over-predicting as binding or non-binding. 
+The ML models learn the topology of the protein-ligand interaction network and use the degree information of the nodes while predicting. Many nodes having only positive or only negative annotations end up being over-predicting as binding or non-binding. 
 
 We use shortest path distance in the interaction network to generate negative samples for the nodes (proteins and ligands) which creates balance between the amount of positive and negative interactions for each protein and ligand.
 
@@ -140,14 +140,15 @@ VecNet-Uneen_Targets-RANDOM.ipynb: Run VecNet on unseen targets where ligand and
 
 VecNet-Uneen_Targets-T-RANDOM-Only.ipynb: Run VecNet on unseen targets where target embeddings are replaced by Gaussian random inputs.
 
+## Citing
 
+If you find AI-Bind useful in your research, please consider adding the following citation:
 
-
-
-
-
-
-
-
-
-
+@misc{chatterjee2021aibind,
+      title={AI-Bind: Improving Binding Predictions for Novel Protein Targets and Ligands}, 
+      author={Ayan Chatterjee and Omair Shafi Ahmed and Robin Walters and Zohair Shafi and Deisy Gysi and Rose Yu and Tina Eliassi-Rad and Albert-László Barabási and Giulia Menichetti},
+      year={2021},
+      eprint={2112.13168},
+      archivePrefix={arXiv},
+      primaryClass={q-bio.QM}
+}
