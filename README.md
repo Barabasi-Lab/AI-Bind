@@ -86,7 +86,7 @@ DeepPurpose Rerun - Transformer CNN.ipynb: We train-test DeepPurpose using the b
 
 Configuration Models on DeepPurpose data.ipynb: We explore the performance of duplex configuration model on DeepPurpose train-test datasets.
 
-runscriptposneg.m: Runs the network configuration model using ligand and target degree sequences. Output files summat10.csv and summat01.csv is then used in calculating the performance of the configuration model.
+runscriptposneg.m: Runs the network configuration model using ligand and target degree sequences. Output files summat10.csv and summat01.csv are then used in calculating the performance of the configuration model.
 
 ### AIBind
 
