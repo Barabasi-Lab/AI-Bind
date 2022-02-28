@@ -40,7 +40,7 @@ Data files are available here: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6
 
 ### Shortcomings of existing deep models
 
-Stat-of-the-art machine learning models like DeepPurpose (e.g., Transformer-CNN) used for drug repurposing learn the topology of the drug-target interaction network. Much simpler network model (configuration model) can acheive a similar test performance.
+State-of-the-art machine learning models like DeepPurpose (e.g., Transformer-CNN) used for drug repurposing learn the topology of the drug-target interaction network. Much simpler network model (configuration model) can acheive a similar test performance.
 
 While predicting potential drugs for novel (i.e., never-before-seen) targets, drugs with more binding annotations in the training data appear more often. The existing ML models lack the ability to learn structural patterns of proteins and ligands, fixing which would enable the ML models in the exploratory analysis over new proteins and ligands.
 
@@ -60,7 +60,7 @@ AI-Bind learns binding patterns from the chemical structures instead of learning
 
 Existing ML models for binding prediction use databases like DrugBank, BindingDB, Tox21, Davis, Kiba, Drug Target Commons etc. These datasets have large bias in the amount of binding and non-binding information for proteins and ligands.
 
-The ML models learn the topology of the protein-ligand interaction network and use the degree information of the nodes while predicting. Many nodes having only positive or only negative pairs end up being over-predicting as binding or non-binding. 
+The ML models learn the topology of the protein-ligand interaction network and use the degree information of the nodes while predicting. Many nodes having only positive or only negative annotations end up being over-predicting as binding or non-binding. 
 
 We use shortest path distance in the interaction network to generate negative samples for the nodes (proteins and ligands) which creates balance between the amount of positive and negative interactions for each protein and ligand.
 
@@ -86,7 +86,7 @@ DeepPurpose Rerun - Transformer CNN.ipynb: We train-test DeepPurpose using the b
 
 Configuration Models on DeepPurpose data.ipynb: We explore the performance of duplex configuration model on DeepPurpose train-test datasets.
 
-runscriptposneg.m: Runs the network configuration model using ligand and target degree sequences. Output files summat10.csv and summat01.csv is then used in calculating the performance of the configuration model.
+runscriptposneg.m: Runs the network configuration model using ligand and target degree sequences. Output files summat10.csv and summat01.csv are then used in calculating the performance of the configuration model.
 
 ### AIBind
 
@@ -96,31 +96,31 @@ import_modules.py: Contains all the necessary Python modules to run AI-Bind mode
 
 ### VecNet
 
-VecNet-Uneen_Nodes.ipynb: We create the network-derived negatives, execute a 5-fold cross-validation on unseen nodes, and make predictions on SARS-CoV-2 genes using VecNet.
+VecNet-Unseen_Nodes.ipynb: We create the network-derived negatives, execute a 5-fold cross-validation on unseen nodes, and make predictions on SARS-CoV-2 genes using VecNet.
 
-VecNet-Uneen_Targets.ipynb: We execute a 5-fold cross-validation on VecNet.
+VecNet-Unseen_Targets.ipynb: We execute a 5-fold cross-validation on VecNet.
 
 ### DeepPurpose - 5 fold
 
-Deep Purpose - Final DataSet - Unseen Targets.ipynb: We execute a 5-fold cross-validation over unseen taregts on DeepPurpose using the network-derived negatives.
+Deep Purpose - Final DataSet - Unseen Targets.ipynb: We execute a 5-fold cross-validation over unseen targets on DeepPurpose using the network-derived negatives.
 
 Deep Purpose - Final DataSet - Unseen Nodes.ipynb: We execute a 5-fold cross-validation over unseen nodes on DeepPurpose using the network-derived negatives.
 
 ### Configuration Model - 5 fold
 
-Configuration Model - Cross-Validation.ipynb: We execute a 5-fold cross-validation over unseen taregts and nodes on duplex configuration model using the network-derived negatives.
+Configuration Model - Cross-Validation.ipynb: We execute a 5-fold cross-validation over unseen targets and nodes on duplex configuration model using the network-derived negatives.
 
 ### VAENet
 
-VAENet-Uneen_Nodes.ipynb: We create the network-derived negatives and and execute a 5-fold cross-validation on unseen nodes here.
+VAENet-Unseen_Nodes.ipynb: We create the network-derived negatives and and execute a 5-fold cross-validation on unseen nodes here.
 
-VAENet-Uneen_Targets.ipynb: We execute a 5-fold cross-validation on VAENet.
+VAENet-Unseen_Targets.ipynb: We execute a 5-fold cross-validation on VAENet.
 
 ### Siamese
 
-Siamese_Uneen_Nodes.ipynb: We create the network-derived negatives and and execute a 5-fold cross-validation on unseen nodes here.
+Siamese_Unseen_Nodes.ipynb: We create the network-derived negatives and and execute a 5-fold cross-validation on unseen nodes here.
 
-Siamese_Uneen_Targets.ipynb: We execute a 5-fold cross-validation on the Siamese model.
+Siamese_Unseen_Targets.ipynb: We execute a 5-fold cross-validation on the Siamese model.
 
 ### Validation
 
@@ -132,22 +132,23 @@ Eigen Spokes Analysis.ipynb - Runs Eigen Spokes analysis on combined adjacency m
 
 ### Random Input Tests
 
-VecNet-Uneen_Nodes-RANDOM.ipynb: Run VecNet on unseen nodes where ligand and target embeddings are replaced by Gaussian random inputs.
+VecNet-Unseen_Nodes-RANDOM.ipynb: Run VecNet on unseen nodes where ligand and target embeddings are replaced by Gaussian random inputs.
 
-VecNet-Uneen_Nodes-T-RANDOM-Only.ipynb: Run VecNet on unseen nodes where target embeddings are replaced by Gaussian random inputs.
+VecNet-Unseen_Nodes-T-RANDOM-Only.ipynb: Run VecNet on unseen nodes where target embeddings are replaced by Gaussian random inputs.
 
-VecNet-Uneen_Targets-RANDOM.ipynb: Run VecNet on unseen targets where ligand and target embeddings are replaced by Gaussian random inputs.
+VecNet-Unseen_Targets-RANDOM.ipynb: Run VecNet on unseen targets where ligand and target embeddings are replaced by Gaussian random inputs.
 
-VecNet-Uneen_Targets-T-RANDOM-Only.ipynb: Run VecNet on unseen targets where target embeddings are replaced by Gaussian random inputs.
+VecNet-Unseen_Targets-T-RANDOM-Only.ipynb: Run VecNet on unseen targets where target embeddings are replaced by Gaussian random inputs.
 
+## Citing
 
+If you find AI-Bind useful in your research, please consider adding the following citation:
 
-
-
-
-
-
-
-
-
-
+@misc{chatterjee2021aibind,
+      title={AI-Bind: Improving Binding Predictions for Novel Protein Targets and Ligands}, 
+      author={Ayan Chatterjee and Omair Shafi Ahmed and Robin Walters and Zohair Shafi and Deisy Gysi and Rose Yu and Tina Eliassi-Rad and Albert-László Barabási and Giulia Menichetti},
+      year={2021},
+      eprint={2112.13168},
+      archivePrefix={arXiv},
+      primaryClass={q-bio.QM}
+}
