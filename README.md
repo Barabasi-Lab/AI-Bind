@@ -48,17 +48,17 @@ We mutate certain building blocks (amino acid trigrams) of the protein structure
 
 All data files are shared via Dropbox: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0
 
-/data/sars-busters-consolidated/Database files: Contains protein-ligand binding data derived from DrugBank, BindingDB and DTC (Drug Target Commons). 
-/data/sars-busters-consolidated/chemicals: Contains ligands used in training and testing of AI-Bind with embeddings.
-/data/sars-busters-consolidated/GitData/DeepPurpose and Configuration Model: Train-test data related to 5-fold cross-validation of Transformer-CNN (DeepPurpose) and the Duplex Configuration Model.
-/data/sars-busters-consolidated/GitData/interactions: Contains the network derived negatives dataset used in trainning of AI-Bind neural netoworks. 
-/data/sars-busters-consolidated/GitData: Contains trained VecNet model, binding predictions on viral and human proteins associated with COVID-19, and summary of auto-docking simulations. 
-/data/sars-busters-consolidated/master_files: Contains the absolute negative (non-binding) protein-ligand pairs used in testing of AI-Bind. 
-/data/sars-busters-consolidated/targets: Contains the proteins used in training and testing of AI-Bind with associated embeddings. 
-/data/sars-busters-consolidated/interactions: Contains the positive (binding) protein-ligand pairs derived from DrugBank, NCFD (Natural Compounds in Food Database), BindingDB and DTC. 
-/data/sars-busters-consolidated/Auto Docking: Contains all files and results from the validation of AI-Bind on COVID-19 related viral and human proteins. 
-/data/sars-busters-consolidated/Binding Probability Profile Validation: Contains the files visualizing the active binding sites from auto-dcoking simulations. 
-/data/sars-busters/Mol2vec: Pre-trained Mol2vec and ProtVec models are available here. 
+1. /data/sars-busters-consolidated/Database files: Contains protein-ligand binding data derived from DrugBank, BindingDB and DTC (Drug Target Commons). 
+2. /data/sars-busters-consolidated/chemicals: Contains ligands used in training and testing of AI-Bind with embeddings.
+3. /data/sars-busters-consolidated/GitData/DeepPurpose and Configuration Model: Train-test data related to 5-fold cross-validation of Transformer-CNN (DeepPurpose) and the Duplex Configuration Model.
+4. /data/sars-busters-consolidated/GitData/interactions: Contains the network derived negatives dataset used in trainning of AI-Bind neural netoworks. 
+5. /data/sars-busters-consolidated/GitData: Contains trained VecNet model, binding predictions on viral and human proteins associated with COVID-19, and summary of auto-docking simulations. 
+6. /data/sars-busters-consolidated/master_files: Contains the absolute negative (non-binding) protein-ligand pairs used in testing of AI-Bind. 
+7. /data/sars-busters-consolidated/targets: Contains the proteins used in training and testing of AI-Bind with associated embeddings. 
+8. /data/sars-busters-consolidated/interactions: Contains the positive (binding) protein-ligand pairs derived from DrugBank, NCFD (Natural Compounds in Food Database), BindingDB and DTC. 
+9. /data/sars-busters-consolidated/Auto Docking: Contains all files and results from the validation of AI-Bind on COVID-19 related viral and human proteins. 
+10. /data/sars-busters-consolidated/Binding Probability Profile Validation: Contains the files visualizing the active binding sites from auto-dcoking simulations. 
+11. /data/sars-busters/Mol2vec: Pre-trained Mol2vec and ProtVec models are available here. 
 
 ## Reproducing results
 
