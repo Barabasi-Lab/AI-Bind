@@ -60,9 +60,9 @@ All data files are shared via Dropbox: https://www.dropbox.com/sh/i2gixtsik1qbjx
 10. /data/sars-busters-consolidated/Binding Probability Profile Validation: Contains the files visualizing the active binding sites from auto-dcoking simulations. 
 11. /data/sars-busters/Mol2vec: Pre-trained Mol2vec and ProtVec models are available here. 
 
-## Reproducing results
+## Code 
 
-The repository contains multiple folders: 
+Here we describe the Jupyter Notebooks, Python Modules and MATLAB scripts used in AI-Bind.
 
 ### DeepPurpose and Confuguration Model
 
@@ -126,8 +126,8 @@ VecNet-Unseen_Targets-T-RANDOM-Only.ipynb: Run VecNet on unseen targets where ta
 
 ## External Resources
 
-Learn auto-docking using Autodock Vina: https://www.youtube.com/watch?v=BLbXkhqbebs
-Learn to visualize active binding sites using PyMOL: https://www.youtube.com/watch?v=mBlMI82JRfI
+1. Learn auto-docking using Autodock Vina: https://www.youtube.com/watch?v=BLbXkhqbebs
+2. Learn to visualize active binding sites using PyMOL: https://www.youtube.com/watch?v=mBlMI82JRfI
 
 # Cite AI-Bind
 
