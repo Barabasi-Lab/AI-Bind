@@ -20,7 +20,7 @@ AI-Bind is a deep-learning pipeline designed to provide reliable binding predict
 	jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root
 The steps above will install all necessary packages and create the environment to run binding predictions using AI-Bind.
 6. Organize your data file in a dataframe format with the colulmns 'InChiKey', 'SMILE' and 'target_aa_code'. Save this dataframe in a .csv file. 
-7. Run the notebook titled VecNet-User-Frontend.ipynb to make the binding predictions. Predicted binidng probabilites will be available under the column header 'Averaged Predictions'.
+7. Run the notebook titled VecNet-User-Frontend.ipynb to make the binding predictions. Predicted binding probabilities will be available under the column header 'Averaged Predictions'.
 
 # Why AI-Bind? 
 
@@ -31,7 +31,7 @@ We present these configuration models, inspired by network science, as the basel
 
 ## What does AI-Bind offer?
 
-We developed the AI-Bind pipeline with the goal to maximize inductive test performance. First, we mitigated annotation imbalance by including in the training set both positive and negative examples for each protein and ligand, balancing the exceeding number of positive annotations in the original data with network-derived negatives, i.e., pairs of proteins and ligands with high shortest path distance on the bipartite network induced by all pairs of proteins and ligands for which we collected binding experimental evidence. This step improves the training phase of all ML models, enhancing their ability to learn structural features. Second, by testing different architectures such as VecNet, VAENet, and Siamese, currently available to the user in different python notebooks, we understood how the best generalizing models are not trained end-to-end, but leverage the vectorial representation capturing the salient structural features of molecules and proteins, as learned on wider and more heterogeneous chemical libraries, not filtered according to the current binding evidence. In machine learning jargon, this implies the introduction of unsupervised pre-training of ligand and protein embeddings within the ML architecture.
+We developed the AI-Bind pipeline with the goal to maximize inductive test performance. First, we mitigated annotation imbalance by including in the training set both positive and negative examples for each protein and ligand, balancing the exceeding number of positive annotations in the original data with network-derived negatives, i.e., pairs of proteins and ligands with large shortest path distance on the bipartite network induced by all pairs of proteins and ligands for which we collected binding experimental evidence. This step improves the training phase of all ML models, enhancing their ability to learn structural features. Second, by testing different architectures such as VecNet, VAENet, and Siamese, currently available to the user in different python notebooks, we understood how the best generalizing models are not trained end-to-end, but leverage the vectorial representation capturing the salient structural features of molecules and proteins, as learned on wider and more heterogeneous chemical libraries, not filtered according to the current binding evidence. In machine learning jargon, this implies the introduction of unsupervised pre-training of ligand and protein embeddings within the ML architecture.
 
 The best performing architecture in AI-Bind implementation is VecNet, which uses Mol2vec and ProtVec to embed the ligands and the proteins, respectively. These embeddings are fed into a decoder (Multi-layer Perceptron), predicting the binding probability.
 ![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/GitHub_Diagram.png)
@@ -51,8 +51,8 @@ All data files are shared via Dropbox: https://www.dropbox.com/sh/i2gixtsik1qbjx
 1. /data/sars-busters-consolidated/Database files: Contains protein-ligand binding data derived from DrugBank, BindingDB and DTC (Drug Target Commons). 
 2. /data/sars-busters-consolidated/chemicals: Contains ligands used in training and testing of AI-Bind with embeddings.
 3. /data/sars-busters-consolidated/GitData/DeepPurpose and Configuration Model: Train-test data related to 5-fold cross-validation of Transformer-CNN (DeepPurpose) and the Duplex Configuration Model.
-4. /data/sars-busters-consolidated/GitData/interactions: Contains the network derived negatives dataset used in trainning of AI-Bind neural netoworks. 
-5. /data/sars-busters-consolidated/GitData: Contains trained VecNet model, binding predictions on viral and human proteins associated with COVID-19, and summary of auto-docking simulations. 
+4. /data/sars-busters-consolidated/GitData/interactions: Contains the network derived negatives dataset used in training of AI-Bind neural netoworks. 
+5. /data/sars-busters-consolidated/GitData: Contains trained VecNet model, binding predictions on viral and human proteins associated with COVID-19, and a summary of the results from the auto-docking simulations. 
 6. /data/sars-busters-consolidated/master_files: Contains the absolute negative (non-binding) protein-ligand pairs used in testing of AI-Bind. 
 7. /data/sars-busters-consolidated/targets: Contains the proteins used in training and testing of AI-Bind with associated embeddings. 
 8. /data/sars-busters-consolidated/interactions: Contains the positive (binding) protein-ligand pairs derived from DrugBank, NCFD (Natural Compounds in Food Database), BindingDB and DTC. 
@@ -87,18 +87,18 @@ Here we describe the Jupyter Notebooks, Python Modules and MATLAB scripts used i
 
 ### EigenSpokes
 
-Eigen Spokes Analysis.ipynb - We run the EigenSpokes analysis here on the combined adjacency matrix (square adjancecy matrix with ligands and targets in both rows and columns). 
+1. Eigen Spokes Analysis.ipynb - We run the EigenSpokes analysis here on the combined adjacency matrix (square adjancecy matrix with ligands and targets in both rows and columns). 
 
 ### Emergence-of-shortcuts
 
-1. Without_and_with_constant_fluctuations_p_bind=0.16.ipynb: Creates and runs the configuration model on the toy unipartite network created from the protein sample in BindingDB. Here we explore two scenarios related to the association between $k$ and $\langle K_d \ranlge$ - without any fluctuation and constant fluctuations over the $\langle K_d \ranlge$ values.
-2. With_varying_fluctuations.ipynb: Creates and runs the configuration model on the toy unipartite network created from the protein sample in BindingDB, where the fluctuations over the $\langle K_d \ranlge$ values follow similar trends as in the BindingDB data.
+1. Without_and_with_constant_fluctuations_p_bind=0.16.ipynb: Creates and runs the configuration model on the toy unipartite network based on the protein sample in BindingDB. Here we explore two scenarios related to the association between degree and dissociation constant - without any fluctuation and constant fluctuations over the dissociation constant values.
+2. With_varying_fluctuations.ipynb: Creates and runs the configuration model on the toy unipartite network based on the protein sample in BindingDB, where the fluctuations over the dissociation constant values follow similar trends as in the BindingDB data.
 
 ### Engineered-Features
 
-1. Underdstanding Engineered Features.ipynb: We explore the explainability of the engineered features (simple features representing the ligand and protein molecules). 
+1. Underdstanding Engineered Features.ipynb: We explore the explainability of the engineered features (simple features representing the ligand and protein molecules. 
 2. VecNet Engineered Features - Mol2vec and Protvec Important Dimensions.ipynb: Identifies the most important dimensions in Mol2vec and ProtVec embeddings, in terms of protein-ligand binding. 
-3. VecNet Engineered Features Concat Original Features.ipynb: Explores the performance of VecNet after concatencating the original ligand and protein embeddings. 
+3. VecNet Engineered Features Concat Original Features.ipynb: Explores the performance of VecNet after concatencating the original protein and ligand embeddings. 
 4. VecNet Engineered Features.ipynb: Replaces Mol2vec and ProtVec embeddings with simple engineered features in VecNet architecture and explores its performance. 
 
 ### Identifying-active-binding-sites
@@ -107,10 +107,10 @@ Eigen Spokes Analysis.ipynb - We run the EigenSpokes analysis here on the combin
 
 ### Random Input Tests
 
-1. VecNet-Unseen_Nodes-RANDOM.ipynb: Runs VecNet on unseen nodes (Inductive test) where the ligand and the protein embeddings are replaced by Gaussian random inputs.
-2. VecNet-Unseen_Nodes-T-RANDOM-Only.ipynb: Runs VecNet on unseen nodes (Inductive test) where the protein embeddings are replaced by Gaussian random inputs.
-3. VecNet-Unseen_Targets-RANDOM.ipynb: Runs VecNet on unseen targets (Semi-Inductive test) where the ligand and the protein embeddings are replaced by Gaussian random inputs.
-4. VecNet-Unseen_Targets-T-RANDOM-Only.ipynb: Runs VecNet on unseen targets (Semi-Inductive test) where the protein embeddings are replaced by Gaussian random inputs.
+1. VecNet-Unseen_Nodes-RANDOM.ipynb: Runs VecNet on unseen nodes (Inductive Test) where the ligand and the protein embeddings are replaced by Gaussian random inputs.
+2. VecNet-Unseen_Nodes-T-RANDOM-Only.ipynb: Runs VecNet on unseen nodes (Inductive Test) where the protein embeddings are replaced by Gaussian random inputs.
+3. VecNet-Unseen_Targets-RANDOM.ipynb: Runs VecNet on unseen targets (Semi-Inductive Test) where the ligand and the protein embeddings are replaced by Gaussian random inputs.
+4. VecNet-Unseen_Targets-T-RANDOM-Only.ipynb: Runs VecNet on unseen targets (Semi-Inductive Test) where the protein embeddings are replaced by Gaussian random inputs.
 
 ### Siamese
 
