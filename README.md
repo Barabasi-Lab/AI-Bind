@@ -133,7 +133,7 @@ Learn to visualize active binding sites using PyMOL: https://www.youtube.com/wat
 
 If you find AI-Bind useful in your research, please consider adding the following citation:
 
-'''
+```
 @misc{chatterjee2021aibind,
       title={AI-Bind: Improving Binding Predictions for Novel Protein Targets and Ligands}, 
       author={Ayan Chatterjee and Omair Shafi Ahmed and Robin Walters and Zohair Shafi and Deisy Gysi and Rose Yu and Tina Eliassi-Rad and Albert-László Barabási and Giulia Menichetti},
@@ -142,4 +142,4 @@ If you find AI-Bind useful in your research, please consider adding the followin
       archivePrefix={arXiv},
       primaryClass={q-bio.QM}
 }
-'''
+```
