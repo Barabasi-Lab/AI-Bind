@@ -80,7 +80,7 @@ Here we describe the Jupyter Notebooks, Python Modules and MATLAB scripts used i
 1. Deep Purpose - Final DataSet - Unseen Targets.ipynb: We execute a 5-fold cross-validation over unseen targets (Semi-Inductive Test) on DeepPurpose using the network-derived negatives.
 2. Deep Purpose - Final DataSet - Unseen Nodes.ipynb: We execute a 5-fold cross-validation over unseen nodes (Inductive Test) on DeepPurpose using the network-derived negatives.
 
-### DeepPurpose-and-Confuguration-Model
+### DeepPurpose-and-Confuguration-Model/Transformer-CNN
 
 1. DeepPurpose Rerun - Transformer CNN.ipynb: We train-test DeepPurpose using the benchmark BindingDB data. Multiple experiments on DeepPurpose have been carried out here, which includes randomly shuffling the chemical structures and degree analysis of DeepPurpose performance.
 2. Configuration Models on DeepPurpose data.ipynb: We explore the performance of the Duplex Configuration Model on the BindingDB dataset used in DeepPurpose.
