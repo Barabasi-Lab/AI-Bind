@@ -29,7 +29,7 @@ We mutate certain building blocks (amino acid trigrams) of the protein structure
 
 1. Download the docker file named "Predictions.dockerfile".
 2. On your terminal, move to the directory with the dockerfile and run : 
-	docker build -t aibindpred -f ./AIBind_Predict_v2.dockerfile ./
+	docker build -t aibindpred -f ./Predictions.dockerfile ./
 3. To run the image as a container: 
 	docker run -it --gpus all --name aibindpredcontainer -p 8888:8888 aibindpred
 You may clone the git repository inside the container, or attach your local volume while running the container :
