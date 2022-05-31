@@ -50,7 +50,7 @@ The steps above will install all necessary packages and create the environment t
 6. Organize your data file in a dataframe format with the colulmns 'InChiKey', 'SMILE' and 'target_aa_code'. Save this dataframe in a .csv file. 
 7. Run the notebook titled VecNet-User-Frontend.ipynb to make the binding predictions. Predicted binding probabilities will be available under the column header 'Averaged Predictions'.
 
-We trained and tested all our models via a server on the Google Cloud Platform with a Intel Broadwell CPU and NVIDIA Tesla T4 GPU(s).
+We trained and tested all our models via a server on the Google Cloud Platform with a Intel Broadwell CPU and NVIDIA Tesla T4 GPU(s). Python version used in AI-Bind is 3.6.6.
 
 # Code and Data
 
