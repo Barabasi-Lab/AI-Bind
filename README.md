@@ -2,9 +2,9 @@
 
 # AI-Bind
 
-AI-Bind is a deep-learning pipeline that provides interpretable binding predictions for never-before-seen proteins and ligands. AI-Bind is capable of rapid screening of large chemical libraries and guiding computationally expensive auto-docking simulations by prioritizing protein-ligand pairs for validation. The pipeline requires as input simple chemical features such as the amino-acid sequence of a protein and the isomeric SMILE of a ligand, which helps to overcome limitations associated with the lack of available 3D protein structures.
+AI-Bind is a deep-learning  pipeline that provides interpretable binding predictions for never-before-seen proteins and ligands. AI-Bind is capable of rapid screening of large chemical libraries and guiding computationally expensive auto-docking simulations by prioritizing protein-ligand pairs for validation. The pipeline requires as input simple chemical features such as the amino-acid sequence of a protein and the isomeric SMILE of a ligand, which helps to overcome limitations associated with the lack of available 3D protein structures.
 
-Preprint available at: https://arxiv.org/abs/2112.13168
+Preprint available at: https://arxiv.org/abs/2112.13168 
 
 # Why AI-Bind? 
 
@@ -23,17 +23,37 @@ We learn that only inductive test performance is a dependable metric for evaluat
 ## What does AI-Bind offer?
 
 AI-Bind pipeline maximizes inductive test performance by including network-derived negatives in the training data and introducing unsupervised pre-training for the molecular embeddings. The pipeline is validated via three different neural architectures: VecNet, VAENet, and Siamese model. The best performing architecture in AI-Bind is VecNet, which uses Mol2vec and ProtVec to embed proteins and ligands, respectively. These embeddings are fed into a decoder (Multi-layer Perceptron), predicting the binding probability.
-
 ![VecNet](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/GitHub_Diagram.png)
 
 ## Interpretability of AI-Bind and Identifying Active Binding Sites
 
-AI-Bind pipeline maximizes inductive test performance by including network-derived negatives in the training data and introducing unsupervised pre-training for the molecular embeddings. The pipeline is validated via three different neural architectures: VecNet, VAENet, and Siamese model. The best performing architecture in AI-Bind is VecNet, which uses Mol2vec and ProtVec to embed proteins and ligands, respectively. These embeddings are fed into a decoder (Multi-layer Perceptron), predicting the binding probability.
+We mutate certain building blocks (amino acid trigrams) of the protein structure to recognize the regions influencing the binding predictions the most and identify them as the potential binding sites. Below, we validate the AI-Bind predicted active binding sites on the human protein TRIM59 by visualising the results of the auto-docking simulations and mapping the predicted sites to the amino acid residues where the ligands bind. AI-Bind predicted binding sites can guide the users in creating an optimal grid for the auto-docking simulations, further reducing simulation time. 
 
 ![trigram-study](https://github.com/ChatterjeeAyan/AI-Bind/blob/main/Images/trigram-study.png)
 
-
 # Setting up AI-Bind and Predicting Protein-Ligand Binding (Guidelines for end users) 
+
+## Hardware set-up for AI-Bind
+
+We trained and tested all our models via a server on the Google Cloud Platform with a Intel Broadwell CPU and NVIDIA Tesla T4 GPU(s). Python version used in AI-Bind is 3.6.6. CUDA version used is 9.0.
+
+## Using requirements file
+
+All Python modules and corresponding versions required for AI-Bind are listed here: requirements.txt
+
+Use pip install -r requirements.txt to install the related packages. 
+
+rdkit version used in AI-Bind: '2017.09.1' (For installation, check the documentation here: https://www.rdkit.org/docs/Install.html, command: conda install -c rdkit rdkit)
+
+Make sure the VecNet-User-Frontend.ipynb notebook and the three files in the AIBind folder (AIBind.py, __init__.py and import_modules.py) are in the same folder. 
+
+Download and save the data files under /data. 
+
+Dropbox link: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0. 
+
+Northeastern OneDrive link: https://northeastern-my.sharepoint.com/:f:/g/personal/chatterjee_ay_northeastern_edu/EqEzRichYUhDpJUj65lB4esBdu4ScbQrAisKpsGiIJg3Jg?e=FMVNX3
+
+## Alternative Installation using Docker
 
 1. Download the docker file named "Predictions.dockerfile".
 2. On your terminal, move to the directory with the dockerfile and run : 
@@ -47,10 +67,11 @@ You may clone the git repository inside the container, or attach your local volu
 5. To run a Jupyter notebook instance inside the container, run :
 	jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root
 The steps above will install all necessary packages and create the environment to run binding predictions using AI-Bind.
-6. Organize your data file in a dataframe format with the colulmns 'InChiKey', 'SMILE' and 'target_aa_code'. Save this dataframe in a .csv file. 
-7. Run the notebook titled VecNet-User-Frontend.ipynb to make the binding predictions. Predicted binding probabilities will be available under the column header 'Averaged Predictions'.
 
-We trained and tested all our models via a server on the Google Cloud Platform with a Intel Broadwell CPU and NVIDIA Tesla T4 GPU(s). Python version used in AI-Bind is 3.6.6.
+## Running predictions from the frontend
+
+1. Organize your data file in a dataframe format with the colulmns 'InChiKey', 'SMILE' and 'target_aa_code'. Save this dataframe in a .csv file. 
+2. Run the notebook titled VecNet-User-Frontend.ipynb to make the binding predictions. Predicted binding probabilities will be available under the column header 'Averaged Predictions'.
 
 # Code and Data
 
@@ -69,7 +90,7 @@ All data files are shared via Dropbox: https://www.dropbox.com/sh/i2gixtsik1qbjx
 9. /data/sars-busters-consolidated/Auto Docking: Contains all files and results from the validation of AI-Bind on COVID-19 related viral and human proteins. 
 10. /data/sars-busters-consolidated/Binding Probability Profile Validation: Contains the files visualizing the active binding sites from auto-dcoking simulations. 
 11. /data/sars-busters/Mol2vec: Pre-trained Mol2vec and ProtVec models are available here. 
-12. /data/sars-busters-consolidated/s4pred: Includes the code and files for predicting the secondary structure of TRIM59.
+12. /data/sars-busters-consolidated/s4pred: Includes the code and files for predicting the secondary structure of TRIM59. 
 
 ## Code 
 
