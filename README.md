@@ -114,7 +114,7 @@ Here we describe the Jupyter Notebooks, Python Modules and MATLAB scripts used i
 
 ### MolTrans
 
-1. example_inductive_AI_Bind_data.py: We run inductive test on MolTrans using the network-derived samples. 
+1. example_inductive_AI_Bind_data.py: We run inductive test on MolTrans using the network-derived negative samples which is used in training AI-Bind. 
 2. example_inductive_BindingDB.py: We run inductive test on MolTrans using the BindingDB data which is used in the MolTrans paper.
 3. example_semi_inductive.py: This script can be used to run semi-inductive tests on MolTrans. 
 3. example_transductive.py: This script can be used to run transductive tests on MolTrans. 
@@ -164,6 +164,7 @@ Here we describe the Jupyter Notebooks, Python Modules and MATLAB scripts used i
 ### Validation
 
 1. SARS-CoV-2 Predictions Analysis VecNet.ipynb: Auto-docking validation of top and bottom 100 predictions made by VecNet on SARS-CoV-2 viral proteins and human proteins associated with COVID-19.
+2. Binding_Probability_Profile_Golden_Standar_Validation.py: Validation of the AI-Bind derived binding locations with gold standard protein binding data. 
 
 ### VecNet
 
