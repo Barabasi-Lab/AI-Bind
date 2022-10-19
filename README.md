@@ -112,6 +112,13 @@ Here we describe the Jupyter Notebooks, Python Modules and MATLAB scripts used i
 1. Deep Purpose - Final DataSet - Unseen Targets.ipynb: We execute a 5-fold cross-validation over unseen targets (Semi-Inductive Test) on DeepPurpose using the network-derived negatives.
 2. Deep Purpose - Final DataSet - Unseen Nodes.ipynb: We execute a 5-fold cross-validation over unseen nodes (Inductive Test) on DeepPurpose using the network-derived negatives.
 
+### MolTrans
+
+1. example_inductive_AI_Bind_data.py: We run inductive test on MolTrans using the network-derived samples. 
+2. example_inductive_BindingDB.py: We run inductive test on MolTrans using the BindingDB data which is used in the MolTrans paper.
+3. example_semi_inductive.py: This script can be used to run semi-inductive tests on MolTrans. 
+3. example_transductive.py: This script can be used to run transductive tests on MolTrans. 
+
 ### DeepPurpose-and-Confuguration-Model
 
 1. DeepPurpose Rerun - Transformer CNN.ipynb: We train-test DeepPurpose using the benchmark BindingDB data. Multiple experiments on DeepPurpose have been carried out here, which includes randomly shuffling the chemical structures and degree analysis of DeepPurpose performance.
