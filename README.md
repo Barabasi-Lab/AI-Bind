@@ -47,11 +47,7 @@ rdkit version used in AI-Bind: '2017.09.1' (For installation, check the document
 
 Make sure the VecNet-User-Frontend.ipynb notebook and the three files in the AIBind folder (AIBind.py, __init__.py and import_modules.py) are in the same folder. 
 
-Download and save the data files under /data. 
-
-Dropbox link: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0. 
-
-Northeastern OneDrive link: https://northeastern-my.sharepoint.com/:f:/g/personal/chatterjee_ay_northeastern_edu/EqEzRichYUhDpJUj65lB4esBdu4ScbQrAisKpsGiIJg3Jg?e=FMVNX3
+Download and save the data files under /data. Download link: https://zenodo.org/record/7226641
 
 ## Alternative Installation using Docker
 
@@ -77,7 +73,7 @@ The steps above will install all necessary packages and create the environment t
 
 ## Data Files
 
-All data files are shared via Dropbox: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0
+All data files are available here: https://zenodo.org/record/7226641
 
 1. /data/sars-busters-consolidated/Database files: Contains protein-ligand binding data derived from DrugBank, BindingDB and DTC (Drug Target Commons). 
 2. /data/sars-busters-consolidated/chemicals: Contains ligands used in training and testing of AI-Bind with embeddings.
