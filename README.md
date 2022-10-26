@@ -49,6 +49,12 @@ Make sure the VecNet-User-Frontend.ipynb notebook and the three files in the AIB
 
 Download and save the data files under /data. Download link: https://zenodo.org/record/7226641
 
+AI-Bind data is also available via Dropbox and OneDrive. 
+
+Dropbox link: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0. 
+
+Northeastern OneDrive link: https://northeastern-my.sharepoint.com/:f:/g/personal/chatterjee_ay_northeastern_edu/EqEzRichYUhDpJUj65lB4esBdu4ScbQrAisKpsGiIJg3Jg?e=FMVNX3 (Use wget and rename the folder)
+
 ## Alternative Installation using Docker
 
 1. Download the docker file named "Predictions.dockerfile".
@@ -74,6 +80,10 @@ The steps above will install all necessary packages and create the environment t
 ## Data Files
 
 All data files are available here: https://zenodo.org/record/7226641
+
+Dropbox link: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn5a?dl=0. 
+
+Northeastern OneDrive link: https://northeastern-my.sharepoint.com/:f:/g/personal/chatterjee_ay_northeastern_edu/EqEzRichYUhDpJUj65lB4esBdu4ScbQrAisKpsGiIJg3Jg?e=FMVNX3 (Use wget and rename the folder)
 
 1. /data/sars-busters-consolidated/Database files: Contains protein-ligand binding data derived from DrugBank, BindingDB and DTC (Drug Target Commons). 
 2. /data/sars-busters-consolidated/chemicals: Contains ligands used in training and testing of AI-Bind with embeddings.
