@@ -187,14 +187,16 @@ Here we describe the Jupyter Notebooks, Python Modules and MATLAB scripts used i
 If you find AI-Bind useful in your research, please add the following citation:
 
 ```
-@misc{chatterjee2021aibind,
-  doi = {10.48550/ARXIV.2112.13168},
-  url = {https://arxiv.org/abs/2112.13168},
-  author = {Chatterjee, Ayan and Walters, Robin and Shafi, Zohair and Ahmed, Omair Shafi and Sebek, Michael and Gysi, Deisy and Yu, Rose and Eliassi-Rad, Tina and Barabási, Albert-László and Menichetti, Giulia},
-  keywords = {Quantitative Methods (q-bio.QM), Machine Learning (cs.LG), FOS: Biological sciences, FOS: Biological sciences, FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {AI-Bind: Improving Binding Predictions for Novel Protein Targets and Ligands},
-  publisher = {arXiv},
-  year = {2021},
-  copyright = {arXiv.org perpetual, non-exclusive license}
+@article{Chatterjee2023,
+  doi = {10.1038/s41467-023-37572-z},
+  url = {https://doi.org/10.1038/s41467-023-37572-z},
+  year = {2023},
+  month = apr,
+  publisher = {Springer Science and Business Media {LLC}},
+  volume = {14},
+  number = {1},
+  author = {Ayan Chatterjee and Robin Walters and Zohair Shafi and Omair Shafi Ahmed and Michael Sebek and Deisy Gysi and Rose Yu and Tina Eliassi-Rad and Albert-L{\'{a}}szl{\'{o}} Barab{\'{a}}si and Giulia Menichetti},
+  title = {Improving the generalizability of protein-ligand binding predictions with {AI}-Bind},
+  journal = {Nature Communications}
 }
 ```
