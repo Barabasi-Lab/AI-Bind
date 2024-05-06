@@ -39,7 +39,7 @@ We trained and tested all our models via a server on the Google Cloud Platform w
 
 ## Using Docker
 
-Please use this docker for running AiI-Bind: https://hub.docker.com/r/omairs/foodome2
+Please use this docker for running AI-Bind: https://hub.docker.com/r/omairs/foodome2
 
 ## Using requirements file
 
@@ -59,7 +59,7 @@ Dropbox link: https://www.dropbox.com/sh/i2gixtsik1qbjxq/AADam6kAMLZ3vl-cRfjo6Cn
 
 Northeastern OneDrive link: https://northeastern-my.sharepoint.com/:f:/g/personal/chatterjee_ay_northeastern_edu/EqEzRichYUhDpJUj65lB4esBdu4ScbQrAisKpsGiIJg3Jg?e=FMVNX3 (Use wget and rename the folder)
 
-## Alternative Faster Installation usingDdata-less Docker
+## Alternative Faster Installation using data-less Docker
 
 1. Download the docker file named "Predictions.dockerfile".
 2. On your terminal, move to the directory with the dockerfile and run : 
